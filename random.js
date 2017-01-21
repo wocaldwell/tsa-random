@@ -1,3 +1,4 @@
+// Make some arrows
 var canvas = document.getElementById("arrows");
 var ctx = canvas.getContext("2d");
 
@@ -25,4 +26,22 @@ function drawRightArrow() {
 }
 
 // drawLeftArrow();
-drawRightArrow();
+// drawRightArrow();
+
+// Select arrow at random
+function pickArrowRandomly() {
+    randomNum = Math.random();
+    console.log(randomNum);
+    if (randomNum < .5) {
+        drawLeftArrow();
+    } else {
+        drawRightArrow();
+    }
+}
+
+pickArrowRandomly();
+
+
+
+
+
