@@ -25,11 +25,9 @@ function drawRightArrow() {
     ctx.fillRect(130,375,150,175);
 }
 
-// drawLeftArrow();
-// drawRightArrow();
-
 // Select arrow at random
 function pickArrowRandomly() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     randomNum = Math.random();
     console.log(randomNum);
     if (randomNum < .5) {
@@ -39,7 +37,8 @@ function pickArrowRandomly() {
     }
 }
 
-pickArrowRandomly();
+// Click event listener for whole page
+document.addEventListener("click", pickArrowRandomly);
 
 
 
